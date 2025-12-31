@@ -29,7 +29,28 @@ function finalSurprise() {
 
 function playMusic() {
     const audio = document.getElementById('music');
+
+    // play music (only once)
     if (audio.paused) {
         audio.play();
     }
+
+    // butterflies animation
+    const container = document.getElementById('butterfly-container');
+    const butterflies = ['🦋', '🦋', '🦋', '🦋', '🦋'];
+
+    butterflies.forEach((emoji, i) => {
+        const butterfly = document.createElement('div');
+        butterfly.className = 'butterfly';
+        butterfly.textContent = emoji;
+        butterfly.style.left = Math.random() * 100 + '%';
+        butterfly.style.animationDelay = i * 0.3 + 's';
+
+        container.appendChild(butterfly);
+
+        // remove after animation
+        setTimeout(() => {
+            butterfly.remove();
+        }, 4000);
+    });
 }
