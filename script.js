@@ -29,5 +29,7 @@ function finalSurprise() {
 
 function playMusic() {
     const audio = document.getElementById('music');
-    audio.play();
+    if (audio.paused) {
+        audio.play();
+    }
 }
