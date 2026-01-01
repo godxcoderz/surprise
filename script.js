@@ -54,3 +54,10 @@ function playMusic() {
         }, 4000);
     });
 }
+function playBgMusic() {
+    const bgMusic = document.getElementById('bgMusic');
+    if (bgMusic && bgMusic.paused) {
+        bgMusic.volume = 0.6;
+        bgMusic.play();
+    }
+}
