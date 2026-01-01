@@ -54,10 +54,33 @@ function playMusic() {
         }, 4000);
     });
 }
+let heartIntervalStarted = false;
+
 function playBgMusic() {
     const bgMusic = document.getElementById('bgMusic');
+    const container = document.getElementById('heart-container');
+
     if (bgMusic && bgMusic.paused) {
         bgMusic.volume = 0.6;
         bgMusic.play();
+    }
+
+    if (!heartIntervalStarted) {
+        heartIntervalStarted = true;
+
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.className = 'flying-heart';
+            heart.textContent = '❤️';
+
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }, 400);
     }
 }
