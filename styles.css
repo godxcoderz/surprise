@@ -72,6 +72,17 @@ h1 {
     width: 80px;   /* change this value if you want */
     height: auto;
 }
+.gallery img {
+    max-width: 100%;
+}
+
+.gallery img.sticker {
+    width: 150px;
+}
+
+.gallery img.sticker-small {
+    width: 80px;
+}
 
 .gallery img:hover {
     transform: scale(1.05);
