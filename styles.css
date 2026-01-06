@@ -97,6 +97,16 @@ h1 {
     cursor: pointer;
     transition: transform 0.3s;
 }
+.gallery img {
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
 .sticker-small {
     width: 80px;   /* change this value if you want */
     height: auto;
