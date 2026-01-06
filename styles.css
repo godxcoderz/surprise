@@ -1,4 +1,33 @@
 body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    120deg,
+    #f896ca,
+    #df536f,
+    #8c2fca,
+    #5227ff
+  );
+  background-size: 400% 400%;
+  animation: aurora 12s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+body {
     font-family: 'Dancing Script', cursive;
     background: linear-gradient(to bottom, #ffb3ba, #ffdfba);
     color: #333;
